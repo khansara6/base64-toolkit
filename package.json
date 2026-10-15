@@ -1,0 +1,13 @@
+{
+  "name": "base64-tool",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A dependency-free vanilla HTML, CSS, and JavaScript Base64 encoder and decoder.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/base64.test.js"
+  },
+  "engines": {
+    "node": "20.19.1"
+  }
+}

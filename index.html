@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A private, browser-based Base64 encoder and decoder for UTF-8 text."
+    />
+    <title>Base64 Tool | Encode and Decode Text</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="./" aria-label="Base64 Tool home">
+          <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+          <span>Base64 Tool</span>
+        </a>
+        <span class="privacy-badge">
+          <span class="privacy-dot" aria-hidden="true"></span>
+          Runs locally in your browser
+        </span>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="page-title">
+          <p class="eyebrow">Developer utility</p>
+          <h1 id="page-title">Encode and decode with confidence.</h1>
+          <p class="hero-copy">
+            Transform UTF-8 text to Base64 and back again. Your content never
+            leaves this browser tab.
+          </p>
+        </section>
+
+        <section class="tool-card" aria-labelledby="workspace-title">
+          <div class="card-heading">
+            <div>
+              <p class="section-kicker">Workspace</p>
+              <h2 id="workspace-title">Base64 converter</h2>
+            </div>
+            <button class="button button-quiet" id="example-button" type="button">
+              <span aria-hidden="true">✦</span>
+              Load example
+            </button>
+          </div>
+
+          <div class="workspace-grid">
+            <section class="text-panel" aria-labelledby="input-label">
+              <div class="panel-heading">
+                <div>
+                  <label id="input-label" class="panel-label" for="input-text">
+                    Input
+                  </label>
+                  <p class="panel-hint" id="input-hint">
+                    Plain text to encode, or Base64 to decode.
+                  </p>
+                </div>
+                <span class="panel-tag">Editable</span>
+              </div>
+              <textarea
+                id="input-text"
+                name="input-text"
+                rows="12"
+                spellcheck="false"
+                autocapitalize="off"
+                autocomplete="off"
+                aria-describedby="input-hint input-count"
+                placeholder="Paste or type your text here..."
+              ></textarea>
+              <div class="panel-footer">
+                <span id="input-count">0 characters</span>
+                <span class="byte-note">UTF-8 safe</span>
+              </div>
+            </section>
+
+            <section class="text-panel output-panel" aria-labelledby="output-label">
+              <div class="panel-heading">
+                <div>
+                  <label id="output-label" class="panel-label" for="output-text">
+                    Output
+                  </label>
+                  <p class="panel-hint" id="output-hint">
+                    Your encoded or decoded result appears here.
+                  </p>
+                </div>
+                <span class="panel-tag panel-tag-output">Read-only</span>
+              </div>
+              <textarea
+                id="output-text"
+                name="output-text"
+                rows="12"
+                readonly
+                spellcheck="false"
+                aria-describedby="output-hint output-count"
+                placeholder="Your result will appear here..."
+              ></textarea>
+              <div class="panel-footer">
+                <span id="output-count">0 characters</span>
+                <span class="byte-note">Ready to copy</span>
+              </div>
+            </section>
+          </div>
+
+          <div class="action-row" aria-label="Conversion actions">
+            <button class="button button-primary" id="encode-button" type="button">
+              <span aria-hidden="true">↗</span>
+              Encode
+            </button>
+            <button class="button button-secondary" id="decode-button" type="button">
+              <span aria-hidden="true">↙</span>
+              Decode
+            </button>
+            <span class="action-divider" aria-hidden="true"></span>
+            <button class="button button-outline" id="swap-button" type="button" disabled>
+              <span aria-hidden="true">⇄</span>
+              Swap input/output
+            </button>
+            <button class="button button-outline" id="copy-button" type="button" disabled>
+              <span aria-hidden="true">▣</span>
+              Copy output
+            </button>
+            <button class="button button-outline" id="download-button" type="button" disabled>
+              <span aria-hidden="true">↓</span>
+              Download result
+            </button>
+            <button class="button button-quiet" id="clear-button" type="button" disabled>
+              Clear all
+            </button>
+          </div>
+
+          <div class="feedback" id="feedback" role="status" aria-live="polite" aria-atomic="true">
+            <span class="feedback-icon" aria-hidden="true">i</span>
+            <span id="feedback-message">Choose Encode or Decode to get started.</span>
+          </div>
+        </section>
+
+        <aside class="info-grid" aria-label="Helpful information">
+          <div class="info-card">
+            <span class="info-icon" aria-hidden="true">⌘</span>
+            <div>
+              <h2>Keyboard friendly</h2>
+              <p>Every control is reachable with Tab and has a visible focus state.</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="info-icon" aria-hidden="true">↔</span>
+            <div>
+              <h2>Unicode support</h2>
+              <p>Hindi, accents, emoji, and other UTF-8 text are handled correctly.</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="info-icon" aria-hidden="true">◈</span>
+            <div>
+              <h2>Not encryption</h2>
+              <p>Base64 is reversible encoding, so never use it to protect secrets.</p>
+            </div>
+          </div>
+        </aside>
+      </main>
+
+      <footer class="site-footer">
+        <span>Private by design</span>
+        <span aria-hidden="true">•</span>
+        <span>No uploads. No tracking. No dependencies.</span>
+      </footer>
+    </div>
+  </body>
+</html>
